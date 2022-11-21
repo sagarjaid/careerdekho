@@ -6,9 +6,6 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      sans: ['"Space Grotesk', "Roboto", "sans-serif"],
-    },
     screens: {
       xs: "375px",
       // => @media (min-width: 375px) { ... }
@@ -31,11 +28,10 @@ module.exports = {
       xxl: "1536px",
       // => @media (min-width: 1280px) { ... }
     },
-    extend: {
-      fontFamily: {
-        SpaceGrotesk: ["'Space Grotesk'", "sans-serif"],
-      },
+    fontFamily: {
+      sans: ["Space Grotesk", "sans-serif"],
     },
+    extend: {},
   },
   plugins: [],
 };

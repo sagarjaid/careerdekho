@@ -4,14 +4,14 @@ import data from "./data"
 
 const SearchBar = () => {
 
-    const [value, setValue] = useState("");
+    const [searchValue, setSearchValue] = useState("");
 
     const onChange = (e: any) => {
-        setValue(e.target.value);
+        setSearchValue(e.target.value);
     };
 
     const onSearch = (searchTerm: any) => {
-        setValue(searchTerm);
+        setSearchValue(searchTerm);
         // our api to fetch the search result
         console.log("search ", searchTerm);
     };
@@ -25,19 +25,19 @@ const SearchBar = () => {
                         {/* <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" /></svg> */}
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" /></svg>
                     </span>
-                    <input className={value ? 'w-full h-8 outline-0' : 'w-full h-8 outline-0 text-center'} type="text" value={value} placeholder="Search any career here..." onChange={onChange} />
-                    <button className='pl-2 pr-4' onClick={() => onSearch(value)}> <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
+                    <input className={searchValue ? 'w-full h-8 outline-0' : 'w-full h-8 outline-0 text-center'} type="text" value={searchValue} placeholder="Search any career here..." onChange={onChange} />
+                    <button className='pl-2 pr-4' onClick={() => onSearch(searchValue)}> <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
                 </div>
                 {/* {value && <div className="mt-2 overflow-y-auto max-h-60 border border-t-0 rounded-b-xl pt-4"> */}
-                <div className={value && "overflow-y-auto max-h-60 rounded-b-xl"} >
+                <div className={searchValue && "overflow-y-auto max-h-60 rounded-b-xl"} >
                     {data
                         .filter((item) => {
-                            const searchTerm = value.toLowerCase();
+                            const searchTerm = searchValue.toLowerCase();
                             const careerName = item.name?.toLowerCase();
 
                             return (
                                 searchTerm &&
-                                careerName?.startsWith(searchTerm) &&
+                                careerName?.includes(searchTerm) &&
                                 careerName !== searchTerm
                             );
                         })
@@ -58,7 +58,7 @@ const SearchBar = () => {
             </div>
             <div>
 
-                {!value && <>
+                {!searchValue && <>
                     <h3 className="mb-8">Trednding career searches across india</h3>
                     <TrendingCareers />
                 </>}

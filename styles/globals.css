@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-    --primary: white;
-    --secondary: gray;
-}
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary) var(--primary);
-}
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -18,20 +11,15 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--primary);
+    background: white;
     border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
+    background-color: gray;
     border-radius: 14px;
-    border: 3px solid var(--primary);
+    border: 3px solid white;
 }
-
-
-@tailwind components;
-@tailwind utilities;
-
 
 @layer base {
     html {
