@@ -7,8 +7,8 @@ const Career = (props: any) => {
             <div className='flex flex-col-reverse sm:flex-row w-full max-w-2xl p-4 bg-white'>
                 <div className='flex flex-col gap-3 flex-1 p-2'>
                     <h1 className='font-medium'>{props.idpage}</h1>
-                    <p className='text-sm'>Now, getting your immigration to Canada is easier than ever with our simplified 4:1 program, step-by-step guidance, and counseling from experts</p>
-                    <h3 className='font-medium text-sm'>Offerings we cater</h3>
+                    <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo purus, venenatis nec posuere id, volutpat at quam. Donec diam dolor, egestas id pellentesque id, lacinia nec ipsum. Donec varius vulputate tellus, quis egestas leo tincidunt vitae. Etiam efficitur augue at mi lacinia, nec mollis purus consectetur. Donec purus dui.</p>
+                    <h3 className='font-medium text-sm'>What's init for you?</h3>
                     <div className='flex text-xs gap-6'>
                         <div className='flex flex-col gap-x-2 gap-y-2 sd:gap-x-4 sd:gap-y-4'>
                             <div className="flex sd:text-sm justify-start items-center gap-1">
@@ -81,11 +81,11 @@ const Career = (props: any) => {
                 </div>
             </div>
             <div className="flex justify-center items-center max-w-3xl">
-                <div className="flex flex-col text-center">
+                <div className="flex flex-col text-center p-4">
                     <span className='flex justify-center'><svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" /></svg>
                     </span>
                     <h4>Super Affordable</h4>
-                    <h5>It does not cost a fortune to migrate to Canada</h5>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit amet</h5>
                 </div>
             </div>
 
