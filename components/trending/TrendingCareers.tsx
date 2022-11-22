@@ -2,7 +2,7 @@ import React from 'react'
 
 const TrendingCareers = () => {
     return (
-        <div className='flex flex-wrap max-w-lg text-xs justify-center items-center gap-x-2 gap-y-2 sd:gap-x-4 sd:gap-y-5'>
+        <div className='flex flex-wrap max-w-3xl text-xs justify-center items-center gap-x-2 gap-y-2 sd:gap-x-8 sd:gap-y-5'>
             <div className='flex flex-col gap-x-2 gap-y-2 sd:gap-x-4 sd:gap-y-5'>
                 <div className="flex sd:text-sm justify-start items-center gap-1">
                     <img className="w-6 h-6" src="/trending.svg" alt="trending" />
@@ -18,7 +18,7 @@ const TrendingCareers = () => {
                 </div>
                 <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
                     <img className="w-6 h-6" src="/trending.svg" alt="trending" />
-                    <p>Astronaut</p>
+                    <p>Data Scientist</p>
                 </div>
             </div>
             <div className='flex flex-col gap-x-2 gap-y-2 sd:gap-x-4 sd:gap-y-5'>
@@ -42,7 +42,7 @@ const TrendingCareers = () => {
             <div className='flex flex-col gap-x-2 gap-y-2 sd:gap-x-4 sd:gap-y-5'>
                 <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
                     <img className="w-6 h-6" src="/trending.svg" alt="trending" />
-                    <p>Photographer</p>
+                    <p>Astronaut</p>
                 </div>
                 <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
                     <img className="w-6 h-6" src="/trending.svg" alt="trending" />
@@ -50,11 +50,29 @@ const TrendingCareers = () => {
                 </div>
                 <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
                     <img className="w-6 h-6" src="/trending.svg" alt="trending" />
-                    <p>Data Scientist</p>
+                    <p>Teacher</p>
                 </div>
                 <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
                     <img className="w-6 h-6" src="/trending.svg" alt="trending" />
                     <p>Youtuber</p>
+                </div>
+            </div>
+            <div className='flex flex-col gap-x-2 gap-y-2 sd:gap-x-4 sd:gap-y-5'>
+                <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
+                    <img className="w-6 h-6" src="/trending.svg" alt="trending" />
+                    <p>Business Analyst</p>
+                </div>
+                <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
+                    <img className="w-6 h-6" src="/trending.svg" alt="trending" />
+                    <p>Network Engineer</p>
+                </div>
+                <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
+                    <img className="w-6 h-6" src="/trending.svg" alt="trending" />
+                    <p>Project Manager</p>
+                </div>
+                <div className="hidden sd:flex sd:text-sm justify-start items-center gap-1">
+                    <img className="w-6 h-6" src="/trending.svg" alt="trending" />
+                    <p>Financial Analyst</p>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import SearchBar from '../SearchBar'
 
 const SearchCard = () => {
     return (
-        <div className='flex flex-col items-center mt-20 w-auto h-auto text-center gap-6'>
+        <div className='flex flex-col items-center mt-20 max-w-4xl h-auto text-center gap-6'>
             <div className="cursor-pointer">
                 <img
                     className='w-44 sd:w-80'
@@ -14,7 +14,6 @@ const SearchCard = () => {
             </div>
             <h2 className='max-w-sm text-sm '>Search from a library of careers and we will walk you through you career path step-by-step</h2>
             <SearchBar />
-
         </div>
     )
 }

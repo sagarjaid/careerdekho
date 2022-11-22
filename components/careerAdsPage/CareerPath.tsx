@@ -2,9 +2,8 @@ import React from 'react'
 
 const Career = (props: any) => {
     return (
-        <div className='flex justify-center flex-col items-center gap-8 h-full'>
-            {/* <div className='sm:border rounded-xl flex flex-col-reverse sm:flex-row w-full max-w-2xl p-4 bg-white'> */}
-            <div className='flex flex-col-reverse sm:flex-row w-full max-w-2xl p-4 bg-white'>
+        <div className='flex justify-start flex-col items-center gap-8 h-full'>
+            <div className='flex flex-col-reverse sm:flex-row w-full max-w-4xl p-4 bg-white'>
                 <div className='flex flex-col gap-3 flex-1 p-2'>
                     <h1 className='font-medium'>{props.idpage}</h1>
                     <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo purus, venenatis nec posuere id, volutpat at quam. Donec diam dolor, egestas id pellentesque id, lacinia nec ipsum. Donec varius vulputate tellus, quis egestas leo tincidunt vitae. Etiam efficitur augue at mi lacinia, nec mollis purus consectetur. Donec purus dui.</p>
@@ -66,7 +65,7 @@ const Career = (props: any) => {
                         </span>
                         <button
                             type="submit"
-                            className="bg-blue-500 text-white w-full py-2 px-4 rounded-full"
+                            className="bg-blue-500 text-slate-50 w-full py-2 px-4 rounded-full"
                         >UNLOCK THIS</button>
                         <div className="text-center text-[8px] text-grey-dark mt-4">
                             you are agree to the
@@ -80,7 +79,7 @@ const Career = (props: any) => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center items-center max-w-3xl">
+            <div className="flex justify-center items-center max-w-4xl">
                 <div className="flex flex-col text-center p-4">
                     <span className='flex justify-center'><svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" /></svg>
                     </span>
@@ -88,7 +87,6 @@ const Career = (props: any) => {
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit amet</h5>
                 </div>
             </div>
-
         </div >
     )
 }

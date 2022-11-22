@@ -27,7 +27,7 @@ const SearchBar = () => {
 
     return (
         <>
-            <div className='flex relative z-10 w-full sm:w-[512px] max-w-2xl flex-col justify-center my-2 border rounded-xl'>
+            <div className='flex relative z-10 w-full sm:w-[612px] max-w-3xl flex-col justify-center my-2 border rounded-xl'>
                 {/* <div className="flex items-center border h-10 rounded-full"> */}
                 <div className="flex items-center h-10">
                     <span className="pl-2 pr-2">
