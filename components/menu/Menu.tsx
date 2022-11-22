@@ -13,11 +13,13 @@ const Menu = () => {
             <div>
                 {/* logo */}
                 <div className="mb-5 cursor-pointer">
-                    <img
-                        src="https://careerdekho.co/wp-content/uploads/2022/05/careerdekho-logo.png"
-                        alt="logo"
-                        width="130px"
-                    />
+                    <a href="/">
+                        <img
+                            src="https://careerdekho.co/wp-content/uploads/2022/05/careerdekho-logo.png"
+                            alt="logo"
+                            width="130px"
+                        />
+                    </a>
                 </div>
                 {/* menu item */}
 
