@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Loginform from "../auth/Loginform";
+import Loginform from "../auth/LoginForm";
+
 
 const Modal = () => {
     const [showModal, setShowModal] = useState(false);

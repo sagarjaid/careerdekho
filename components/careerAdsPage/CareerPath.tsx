@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Loginform from '../auth/Loginform'
 import Modal from '../modal/Modal'
 
 const Career = (props: any) => {
