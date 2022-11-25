@@ -36,14 +36,7 @@ const SignUp = () => {
                     </div>
                 </section >
                 <section className='w-full flex flex-col'>
-                    <Nav />
-                    <div className='flex justify-between items-center p-4'>
-                        <span className='text-sm'>.</span>
-                        <div className='flex justify-between items-center gap-2'>
-                            <span className='text-sm hidden sd:block'>Already have an account?</span>
-                            <button type="submit" className="bg-slate-50 text-gray-500 border-2 w-max px-1 rounded-lg">sign-in</button>
-                        </div>
-                    </div>
+                    <Nav isSingup={true} />
                     <div className='flex justify-between gap-6 p-4 pt-1 h-screen'>
                         <div className='flex  justify-center lg:justify-start items-center w-full bg-white h-full mb-4 p-4'>
                             <div className='flex flex-col justify-center items-start gap-3 bg-slate-50 p-4 border rounded-md' >
