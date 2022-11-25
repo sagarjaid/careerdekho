@@ -2,11 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Modal from '../modal/Modal'
 
 const Career = (props: any) => {
-    const [screenSize, steScreenSize] = useState(1024)
-
-    useEffect(() => {
-        steScreenSize(window.screen.width)
-    }, [screenSize])
 
     return (
         <div className='flex justify-start flex-col items-center gap-8 h-full'>

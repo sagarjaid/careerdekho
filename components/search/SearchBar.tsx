@@ -16,7 +16,7 @@ const SearchBar = () => {
 
         // const url = `${window.location.hostname}\\s\\${searchTerm}`
 
-        const url = `\\${searchTerm}`
+        const url = `\\s\\${searchTerm}`
 
         window.location.href = url;
 

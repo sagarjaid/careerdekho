@@ -1,9 +1,10 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import Menu from '../components/menu/Menu'
-import Nav from '../components/menu/Nav'
-import Career from '../components/careerAdsPage/CareerPath'
-import SideBar from '../components/sidebar/SideBar'
+import Menu from '../../components/menu/Menu'
+import Nav from '../../components/menu/Nav'
+import Career from '../../components/careerAdsPage/CareerPath'
+import SideBar from '../../components/sidebar/SideBar'
+
 
 
 
