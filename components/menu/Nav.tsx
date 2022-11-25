@@ -67,11 +67,11 @@ const Nav = (props: any) => {
                     }
 
                     {/* mobile menu */}
-                    <div className='absolute top-0 left-0 z-50 text-xs min-w-max'>
+                    <div className='absolute top-0 left-0 z-50 text-xs w-4/5 sd:w-max '>
                         <section className={toggle ? "lg:hidden translate-x-0 easy-in-out duration-1000 flex flex-col justify-between w-full bg-neutral-900 h-screen p-4 pt-7" : "hidden"}>
                             <div>
                                 {/* logo */}
-                                <div className="cursor-pointer">
+                                <div className="cursor-pointer mb-4 sd:mb-0">
                                     <a href="/">
                                         <img
                                             src="https://careerdekho.co/wp-content/uploads/2022/05/careerdekho-logo-white-v1.png"
@@ -79,10 +79,11 @@ const Nav = (props: any) => {
                                             width="130px"
                                         />
                                     </a>
-                                    <span className='relative -bottom-5 -right-[150px] -top-6'>
-                                        <svg className="w-6 h-6" onClick={handleToggle} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                                    </span>
                                 </div>
+                                <span className='hidden sd:inline relative -bottom-4 -right-[150px] -top-4 '>
+                                    {/* <svg className="w-6 h-6" onClick={handleToggle} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg> */}
+                                    <img className='inline' src="/close.svg" alt="close" onClick={handleToggle} width="15px" />
+                                </span>
                                 {/* menu item */}
 
                                 <div className={"flex justify-start items-center h-10 cursor-pointer text-slate-50"}>

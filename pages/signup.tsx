@@ -20,7 +20,7 @@ const SignUp = () => {
         <div>
             <main className='flex justify-start bg-white text-base h-screen'>
                 {/* menu section */}
-                <section className="hidden lg:flex  flex-col justify-between w-64 bg-neutral-900 h-screen p-4 pt-7">
+                <section className="hidden lg:flex  flex-col justify-between w-2/5 bg-neutral-900 h-screen p-4 pt-7">
                     <div>
                         {/* logo */}
                         <div className="mb-5 cursor-pointer">
