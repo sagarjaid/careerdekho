@@ -1,9 +1,36 @@
 import { useState } from 'react'
+import { intiFirebase } from '../../firebase/Firebase';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Loginform = () => {
 
     const [toggle, setToggle] = useState(false)
     const [opt, setOtp] = useState(false)
+
+    intiFirebase()
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
+
+    const signIn = async () => {
+        const result = await signInWithPopup(auth, provider);
+        console.log(result.user);
+    }
+
+    if (loading) {
+        return <div className='flex justify-center items-center h-screen'>Loading...</div>;
+    }
+
+    if (user) {
+        // router.push("/");
+        console.log(user, "user login Page");
+    }
+
+    if (!user) {
+        console.log("no user found: login Page");
+
+    }
 
     const handleOtp = () => {
         setOtp(!opt)
@@ -22,8 +49,9 @@ const Loginform = () => {
                     src="https://www.vizio.com/en/account/images/buttons-social-google-web.png"
                     alt="logo"
                     width="240px"
+                    onClick={signIn}
                 />
-                <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH PHONE</p>
+                {/* <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH PHONE</p> */}
             </>}
 
             {toggle && !opt && <>

@@ -48,7 +48,7 @@ const SignUp = () => {
                                         alt="logo"
                                         width="240px"
                                     />
-                                    <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH PHONE</p>
+                                    {/* <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH PHONE</p> */}
                                 </>}
 
                                 {toggle && !opt && <>

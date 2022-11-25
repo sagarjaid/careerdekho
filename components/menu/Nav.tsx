@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Menu from './Menu'
+import Image from 'next/image'
 
 const Nav = (props: any) => {
     const [toggle, setToggle] = useState(false)
@@ -8,6 +9,7 @@ const Nav = (props: any) => {
         console.log("toogle got clicked");
         setToggle(!toggle)
     }
+
     return (
         <>
             <div className="flex justify-between items-center p-4 border-b lg:border-0">
@@ -36,14 +38,20 @@ const Nav = (props: any) => {
                         (
                             <>
                                 <span className="hidden lg:inline">
-                                    <svg
-                                        className="w-6 h-6 m-1 cursor-pointer"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
-                                    </svg>
+                                    {props.photoURL ?
+                                        <img
+                                            src={props.photoURL}
+                                            alt="userlogo"
+                                            width="40px"
+                                            className='rounded-full'
+                                        /> : <svg
+                                            className="w-6 h-6 m-1 cursor-pointer"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
+                                        </svg>}
                                 </span>
                                 <span
                                     className="lg:hidden"

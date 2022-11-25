@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
+import { getAuth } from "firebase/auth";
+import { intiFirebase } from '../../firebase/Firebase'
 
-const Menu = () => {
+const Menu = (props: any) => {
     const [toggle, setToggle] = useState(false)
+    intiFirebase();
+    const auth = getAuth();
 
     const handleToggle = () => {
         console.log("toogle got clicked");
         setToggle(!toggle)
     }
+
     return (
         <section className={toggle ? 'hidden lg:flex flex-col justify-between w-20 bg-neutral-900 h-screen p-4 pt-7 text-slate-50' : 'hidden lg:flex  flex-col justify-between w-64 bg-neutral-900 h-screen p-4 pt-7 '}>
             <div>
@@ -60,7 +65,7 @@ const Menu = () => {
                 <div className={toggle ? "flex justify-center items-center h-10 cursor-pointer text-slate-50" : "flex justify-start items-center h-10 cursor-pointer text-slate-50"}>
                     <span
                     ><svg className="w-5 h-5 m-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clipRule="evenodd" /></svg></span>
-                    {!toggle && <span className="m-1">Logout</span>}
+                    {!toggle && <span className="m-1" onClick={() => auth.signOut()}>Logout</span>}
                 </div>
             </div>
 

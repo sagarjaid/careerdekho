@@ -1,12 +1,45 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Menu from '../components/menu/Menu'
 import Nav from '../components/menu/Nav'
 import SearchCard from '../components/search/card/SearchCard'
 import SideBar from '../components/sidebar/SideBar'
 
+import { getAuth, signInWithPopup, GoogleAuthProvider, RecaptchaVerifier } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { intiFirebase } from '../firebase/Firebase'
+import { useRouter } from "next/router";
+
+
 const SignIn = () => {
+
     const [toggle, setToggle] = useState(false)
     const [opt, setOtp] = useState(false)
+
+
+    intiFirebase();
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
+    const router = useRouter();
+
+    const signIn = async () => {
+        const result = await signInWithPopup(auth, provider);
+        console.log(result.user);
+    }
+
+    if (loading) {
+        return <div className='flex justify-center items-center h-screen'>Loading...</div>;
+    }
+
+    if (user) {
+        router.push("/");
+        console.log(user, "user login Page");
+    }
+
+    if (!user) {
+        console.log("no user found: login Page");
+
+    }
 
     const handleOtp = () => {
         setOtp(!opt)
@@ -47,8 +80,9 @@ const SignIn = () => {
                                         src="https://www.vizio.com/en/account/images/buttons-social-google-web.png"
                                         alt="logo"
                                         width="240px"
+                                        onClick={signIn}
                                     />
-                                    <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH PHONE</p>
+                                    {/* <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH PHONE</p> */}
                                 </>}
 
                                 {toggle && !opt && <>
@@ -61,7 +95,7 @@ const SignIn = () => {
                                             name="phone"
                                             placeholder="WhatsApp number" />
                                     </div>
-                                    <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH GOOGLE</p>
+                                    {/* <p className='text-blue-500 text-xs underline cursor-pointer' onClick={handleToggle}>OR SIGN IN WITH GOOGLE</p> */}
                                     <p className='text-xs'>by siging up with us you agree the T&c and  Privacy Policy</p>
                                     <button type="submit" className="bg-green-700 text-slate-50 w-36  py-1.5 px-4 rounded-full" onClick={handleOtp}>SEND OTP</button>
                                 </>}
